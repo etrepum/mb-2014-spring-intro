@@ -81,3 +81,7 @@ with your account and by default it may be published along with your code.
 If you don't want that, go to the Emails section under Account Settings.
 After you verify your email address there will be an option to
 "Keep my email address private".
+
+If you end up enjoying GitHub and want to keep some of your schoolwork
+there privately, you can apply to have your account upgraded for free at
+https://education.github.com/
