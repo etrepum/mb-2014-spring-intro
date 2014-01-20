@@ -1,0 +1,81 @@
+Intro
+=====
+
+Coding is about coming up with an idea and translating it into instructions
+that a computer can execute. Once you get the hang of it, you can figure
+out how to make just about anything happen. Coding has made its way into
+just about every profession and field of study. Even if you don't decide
+to study in computer science or become a career programmer, you're
+probably going to be able to use what you learn here no matter what you
+study or where you work.
+
+If at any point you get stuck, confused, or just want to know how to do
+something, ask a classmate for help. If that doesn't work, ask me or one of
+the other mentors and we'll try and get you back on track. Programmers spend
+a lot of time helping their peers, so this is no different than how it works
+in the real world. Be respectful of your classmates: there are no stupid
+questions here.
+
+Topics
+======
+
+In this course we're going to focus on the web. If you're up to date on the
+jargon, that means HTML, CSS and JavaScript. If not, don't worry, we'll get
+into all that later. The good news is that you can do just about anything
+in a web browser these days, so we're not very limited in what we can do.
+
+The course is designed to be a series of projects; some you'll finish in a
+day, others you might spend a few weeks on. We make our own curriculum here,
+this isn't from a textbook. Your mission here is to bend the rules and
+make these projects your own. We're here to help you accomplish what you
+set out to do, so if you want us to cover some particular then topic just ask.
+Always be thinking about ideas for sites or applications you want to make,
+and feel free to work with others to make them happen.
+
+Browser
+=======
+
+The first thing you need to build something for the web is a web browser.
+One of the best web browsers for web development work is Google Chrome, which
+also happens to be the most popular web browser in the US by most metrics.
+Other popular browsers are Mozilla Firefox, Microsoft Internet Explorer, and
+Apple Safari. It's a bit easier if we're all using the same thing, so
+go ahead and download Google Chrome and install it into your Applications
+folder. You may also want to drag it into the dock because you'll be using
+it constantly!
+
+https://www.google.com/chrome/
+
+Text Editor
+===========
+
+The next most important thing is a text editor. For writing code you want to
+use a special text editor designed for that purpose. We have experience with
+a lot of these. The trouble is that many of them are either tricky to learn
+or expensive to purchase. For this course we're going to be trying out
+Adobe Brackets, which is super powerful, easy to use, and also free and open
+source. One really cool thing about Adobe Brackets is that it's made almost
+entirely with the same web technologies that we'll be using: HTML, CSS, and
+JavaScript. Maybe we'll even figure out how to build our own extensions to
+Brackets to customize it just for us. Go ahead and download Brackets now
+and put it in your Applications folder and dock.
+
+http://brackets.io/
+
+GitHub
+======
+
+GitHub is a free service we'll be using to keep our code safe and help us
+collaborate. GitHub is like a backup service for your code, and if you
+make sure to push your code there every class you won't lose it, even if the
+laptop you were using breaks. When working in groups it also makes it much
+easier for multiple people to collaborate on the same project.
+
+Go to https://github.com/ and sign up for an account. You should also download
+the GitHub application and set it up with your account. 
+
+GitHub won't spam you, but the email address you choose will be associated
+with your account and by default it may be published along with your code.
+If you don't want that, go to the Emails section under Account Settings.
+After you verify your email address there will be an option to
+"Keep my email address private".
