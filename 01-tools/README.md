@@ -22,7 +22,8 @@ Topics
 In this course we're going to focus on the web. If you're up to date on the
 jargon, that means HTML, CSS and JavaScript. If not, don't worry, we'll get
 into all that later. The good news is that you can do just about anything
-in a web browser these days, so we're not very limited in what we can do.
+with these technologies (even outside of the browser!),
+so we're not very limited in what we can do.
 
 The course is designed to be a series of projects; some you'll finish in a
 day, others you might spend a few weeks on. We make our own curriculum here,
@@ -31,6 +32,22 @@ make these projects your own. We're here to help you accomplish what you
 set out to do, so if you want us to cover some particular then topic just ask.
 Always be thinking about ideas for sites or applications you want to make,
 and feel free to work with others to make them happen.
+
+Account
+=======
+
+The first step is to make yourself an account on the computer you're
+using. Remember the name of this computer, it'll be easier if you
+pick the same one every week because it'll already have an account
+for you. The name is on a label on the bottom of your computer.
+
+To do that, log in to the administrator account `missionbit` with the
+password (password given in class). Then open up `System Preferences`,
+click on `Users & Groups`, click the lock to make changes, and then
+click the `+` icon to make yourself a user.
+
+Once that's done, click the Apple menu and log out, then login with
+your account!
 
 Browser
 =======
@@ -81,3 +98,7 @@ with your account and by default it may be published along with your code.
 If you don't want that, go to the Emails section under Account Settings.
 After you verify your email address there will be an option to
 "Keep my email address private".
+
+If you end up enjoying GitHub and want to keep some of your schoolwork
+there privately, you can apply to have your account upgraded for free at
+https://education.github.com/
