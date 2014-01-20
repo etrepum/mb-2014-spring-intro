@@ -3,11 +3,11 @@ Intro
 
 Coding is about coming up with an idea and translating it into instructions
 that a computer can execute. Once you get the hang of it, you can figure
-out how to make just about anything happen. Coding has made its way into
-just about every profession and field of study. Even if you don't decide
+out how to make just about anything you want. Even if you don't decide
 to study in computer science or become a career programmer, you're
 probably going to be able to use what you learn here no matter what you
-study or where you work.
+study or where you work. Computers are an integral part of nearly
+everything that we do today.
 
 If at any point you get stuck, confused, or just want to know how to do
 something, ask a classmate for help. If that doesn't work, ask me or one of
@@ -67,9 +67,11 @@ GitHub
 
 GitHub is a free service we'll be using to keep our code safe and help us
 collaborate. GitHub is like a backup service for your code, and if you
-make sure to push your code there every class you won't lose it, even if the
-laptop you were using breaks. When working in groups it also makes it much
-easier for multiple people to collaborate on the same project.
+make sure to push your code there every class you won't lose it, even
+if you aren't using the same laptop every class, or you accidentally
+delete a file or make a mistake after you've pushed it. When working
+in groups it also makes it much easier for multiple people to
+collaborate on the same project.
 
 Go to https://github.com/ and sign up for an account. You should also download
 the GitHub application and set it up with your account. 
