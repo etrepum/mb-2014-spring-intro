@@ -20,6 +20,13 @@ Out of Site Survey:
 
 * http://bit.ly/oos-2014-spring
 
+Icebreaker
+==========
+
+Let's try an icebreaker where the students introduce themselves, and
+then ask one of the mentors a question. This doesn't put the students
+on the spot quite so much.
+
 Topics
 ======
 
