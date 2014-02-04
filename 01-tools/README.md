@@ -88,6 +88,31 @@ application. If you get this error, open System Preferences, go to
 Security & Privacy, and click "Open Anyway". The next time you open
 Brackets it should work.
 
+"Remixing" Websites
+===================
+
+Browsers have traditionally had a "view source" button that allowed
+you to look under the hood of a website and see how it was built, but
+a few years ago web browsers started adding better developer tools
+that even let you modify websites while you're looking at them.
+
+This is a great tool that you can use to learn how sites are put
+together, but it can also be used for more nefarious purposes like
+taking fake screenshots or cheating in a web game.
+
+Let's take a few minutes to experiment with developer tools and
+remix a site. Find some site on the internet that would be
+fun to change the content for, maybe the news or wikipedia, and
+then right-click (with two fingers or use `Ctrl-Click` if the laptop
+has a physical button) and choose "Inspect Element". `Double-click`
+on the text you want to change and press return to change it.
+
+Once you've finished your remix masterpiece, take a screenshot of the
+browser with `Cmd-Shift-4`, then press `Space`, and click on the browser
+window. This should put a screenshot on your desktop. Go to
+http://imgur.com/ ("imager") and upload the screenshot and come up
+to the board and write the URL down so we can all check it out!
+
 GitHub
 ======
 
@@ -120,6 +145,26 @@ Intro Survey
 (This should happen right before or after break)
 
 * http://bit.ly/mbit-2014-spring-lick-intro
+
+Bob will take care of adding the students to the appropriate team:
+
+* https://github.com/orgs/MissionBit/teams/students-2014-spring-intro-lick
+
+Roll Call
+=========
+
+For a bit of entertainment (and to help mentors learn student names),
+we'll do a sort of roll call in a GitHub issue, with fun photos.
+
+Bob will demonstrate going to the repository:
+
+* https://github.com/MissionBit/students-2014-spring-intro-lick
+
+And then he'll create an issue called Roll Call. The goal from here
+is to open up Photo Booth, take a fun photo, and drag it over to
+a comment on the GitHub issue. This will let us match up usernames
+to photos and should be kinda fun.
+
 
 Making a Repository
 ===================
