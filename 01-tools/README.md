@@ -16,6 +16,10 @@ a lot of time helping their peers, so this is no different than how it works
 in the real world. Be respectful of your classmates: there are no stupid
 questions here.
 
+Out of Site Survey:
+
+* http://bit.ly/oos-2014-spring
+
 Topics
 ======
 
@@ -109,6 +113,13 @@ After you verify your email address there will be an option to
 If you end up enjoying GitHub and want to keep some of your schoolwork
 there privately, you can apply to have your account upgraded for free at
 https://education.github.com/
+
+Intro Survey
+============
+
+(This should happen right before or after break)
+
+* http://bit.ly/mbit-2014-spring-lick-intro
 
 Making a Repository
 ===================
