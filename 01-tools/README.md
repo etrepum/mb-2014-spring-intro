@@ -79,6 +79,11 @@ and put it in your Applications folder and dock.
 
 http://brackets.io/
 
+When you open up Brackets you may get an error that it's an unsigned
+application. If you get this error, open System Preferences, go to
+Security & Privacy, and click "Open Anyway". The next time you open
+Brackets it should work.
+
 GitHub
 ======
 
@@ -91,7 +96,9 @@ in groups it also makes it much easier for multiple people to
 collaborate on the same project.
 
 Go to https://github.com/ and sign up for an account. You should also download
-the GitHub application and set it up with your account. 
+the GitHub application from http://mac.github.com/ and set it up with
+your
+account. 
 
 GitHub won't spam you, but the email address you choose will be associated
 with your account and by default it may be published along with your code.
@@ -102,3 +109,29 @@ After you verify your email address there will be an option to
 If you end up enjoying GitHub and want to keep some of your schoolwork
 there privately, you can apply to have your account upgraded for free at
 https://education.github.com/
+
+Making a Repository
+===================
+
+Open GitHub and sign in. Click the `+` at the bottom and choose
+"Create a new Repository". The name of the repository should be
+`YOURNAME.github.io`. For example, if your GitHub username is
+`pokemon-fan` then the name should be `pokemon-fan.github.io`.
+
+Now open Brackets and press `Opt-Cmd-O` (File -> Open Folder).
+Navigate to your home directory by pressing `Shift-Cmd-H`
+(or use the pulldown). Choose your repository and then click Open (or
+press return).
+
+Press `Cmd-N` (File -> New) to create a new file. Type anything you
+want, such as "Hello World", into the window and then press
+`Cmd-S` (File -> Save). Choose the name `index.html` and click Save.
+
+Switch back to GitHub with `Cmd-Tab`. You should see the changes you
+made. Click on the `+` with arrows icon so that the button says
+"Commit and Sync". Type in a quick note about what you did in Summary
+and then click "Commit and Sync".
+
+After about 10 minutes, you'll have your own website at
+http://YOURNAME.github.io/ - we'll be using this repository throughout
+the semester so you can easily show off your projects.
