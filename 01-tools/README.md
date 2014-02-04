@@ -202,6 +202,9 @@ the semester so you can easily show off your projects.
 Above and Beyond
 ================
 
+We should show them the Live Preview functionality in Brackets so
+that they can see their changes live before publishing.
+
 If we have time and students are ready for it, we can introduce them
 to Mozilla's HTML intro or codecademy so that they can start picking
 up HTML tags to use in their index.html
