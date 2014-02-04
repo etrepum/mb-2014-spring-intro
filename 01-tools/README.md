@@ -198,3 +198,13 @@ and then click "Commit and Sync".
 After about 10 minutes, you'll have your own website at
 http://YOURNAME.github.io/ - we'll be using this repository throughout
 the semester so you can easily show off your projects.
+
+Above and Beyond
+================
+
+If we have time and students are ready for it, we can introduce them
+to Mozilla's HTML intro or codecademy so that they can start picking
+up HTML tags to use in their index.html
+
+* http://bit.ly/mdn-html-intro
+* http://www.codecademy.com/tracks/web
