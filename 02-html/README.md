@@ -99,6 +99,10 @@ An example:
 </html>
 ```
 
+Here's a gist that the students to use as a reference:
+
+* http://bit.ly/mbit-html-1
+
 Project: Image
 ==============
 
