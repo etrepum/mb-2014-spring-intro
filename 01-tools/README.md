@@ -27,6 +27,9 @@ Let's try an icebreaker where the students introduce themselves, and
 then ask one of the mentors a question. This doesn't put the students
 on the spot quite so much.
 
+> This seemed to work well, we got some pretty good questions and the
+> students seemed to enjoy it.
+
 Topics
 ======
 
@@ -44,6 +47,9 @@ set out to do, so if you want us to cover some particular then topic just ask.
 Always be thinking about ideas for sites or applications you want to make,
 and feel free to work with others to make them happen.
 
+> I didn't give too much of this shpiel, but it makes sense to leave
+> it in here for readers of the curriculum :)
+
 Account
 =======
 
@@ -59,6 +65,12 @@ click the `+` icon to make yourself a user.
 
 Once that's done, click the Apple menu and log out, then login with
 your account!
+
+> It may have been easier if we had the students create administrator
+> accounts for themselves, as moving apps to the Applications folder
+> requires admin access. They got along fine using missionbit for
+> auth though, it just added a little overhead.
+
 
 Browser
 =======
@@ -95,6 +107,9 @@ application. If you get this error, open System Preferences, go to
 Security & Privacy, and click "Open Anyway". The next time you open
 Brackets it should work.
 
+> This took up some time. Hopefully Brackets will start signing their
+> app soon!
+
 "Remixing" Websites
 ===================
 
@@ -119,6 +134,13 @@ browser with `Cmd-Shift-4`, then press `Space`, and click on the browser
 window. This should put a screenshot on your desktop. Go to
 http://imgur.com/ ("imager") and upload the screenshot and come up
 to the board and write the URL down so we can all check it out!
+
+> The students really loved this exercise, so much so that at least
+> two thirds of the class decided to keep working on it during the
+> break!
+> We did not get to the imgur part. I'm going to repeat this exercise
+> in day 2 with a little more demonstration, and we'll upload the
+> screenshots to their GitHub pages repos instead.
 
 GitHub
 ======
@@ -146,6 +168,10 @@ If you end up enjoying GitHub and want to keep some of your schoolwork
 there privately, you can apply to have your account upgraded for free at
 https://education.github.com/
 
+> Nobody asked about the privacy/email issues so I didn't cover it. I
+> also didn't cover anything about education.github.io. This seemed
+> like a topic best left for later in the semester.
+
 Intro Survey
 ============
 
@@ -156,6 +182,9 @@ Intro Survey
 Bob will take care of adding the students to the appropriate team:
 
 * https://github.com/orgs/MissionBit/teams/students-2014-spring-intro-lick
+
+> This worked out great, Google Docs adds entries live so I didn't
+> even have to keep refreshing.
 
 Roll Call
 =========
@@ -172,6 +201,8 @@ is to open up Photo Booth, take a fun photo, and drag it over to
 a comment on the GitHub issue. This will let us match up usernames
 to photos and should be kinda fun.
 
+> 15/16 of the students got to this. We should have the other student
+> make this happen :)
 
 Making a Repository
 ===================
@@ -199,6 +230,9 @@ After about 10 minutes, you'll have your own website at
 http://YOURNAME.github.io/ - we'll be using this repository throughout
 the semester so you can easily show off your projects.
 
+> 9/16 of the students finished this correctly. We'll have to spend
+> more time on this in day 2.
+
 Above and Beyond
 ================
 
@@ -211,3 +245,5 @@ up HTML tags to use in their index.html
 
 * http://bit.ly/mdn-html-intro
 * http://www.codecademy.com/tracks/web
+
+> None of the students got to this, so we'll work on this in day 2.
