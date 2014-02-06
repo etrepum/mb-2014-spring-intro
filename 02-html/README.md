@@ -5,6 +5,17 @@ Mission Bit introductory survey:
 
 http://bit.ly/mbit-2014-spring-experience
 
+Remix Take 2
+============
+
+Do a repeat of
+https://github.com/etrepum/mb-2014-spring-intro/tree/master/01-tools#remixing-websites
+
+This will be something fun for the students and will give us time to
+catch people up.
+
+Take a screenshot. Rename it to `remix.png` and add it to your repository.
+
 HTML History
 ============
 
@@ -55,3 +66,78 @@ some horizonal space and you don't want the browser to collapse it. There
 are other fun entities you can use such as `&hearts;` and you can use an entity
 to represent any possible character such as `&#8734;`, but you can also put
 those characters literally in the document so they aren't strictly necessary.
+
+Project: Home Page
+==================
+
+They should update their index.html to be a proper HTML document.
+It should use (at least) the following tags:
+
+* doctype
+* html
+* head
+* title
+* body
+* h1
+* p
+
+An example:
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>Mittens for Kittens</title>
+  </head>
+  <body>
+    <h1>NEW! Kitten Mittons!!</h1>
+    <p>
+      Cloth footwear for cats. The goal is to make them quieter
+      when they walk around
+    </p>
+  </body>
+</html>
+```
+
+Project: Image
+==============
+
+Rename the screenshot from your remix project.
+
+Project: Embed
+==============
+
+Make a separate video.html file. Link to it from the home page with an
+`a` tag. Find a cool YouTube video and embed it in this page.
+
+Project: Images
+===============
+
+Make an images.html file. Link to it from the home page with an `a` tag.
+Download a few cool images or take some photos with Photo Booth, use
+the `ul`, `li`, and `img` tags.
+
+Project: CSS
+============
+
+Create a style.css file, use a
+`<link rel="stylesheet" href="style.css">` in the head. Add some style
+to your index.html. Some ideas:
+
+```css
+body {
+  color: white;
+  background-color: black;
+}
+h1 {
+  font-size: 40px;
+  color: #ffe4c4;
+}
+```
+
+Resources
+=========
+
+* http://bit.ly/mdn-html-intro
+* http://bit.ly/html5-element-list
+* http://www.codecademy.com/tracks/web
