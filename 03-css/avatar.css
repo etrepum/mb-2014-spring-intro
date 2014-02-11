@@ -1,0 +1,75 @@
+.avatar {
+    /* this sets default styles for everything in the avatar group */
+    stroke-width: 5;
+    fill: white;
+    stroke: black;
+}
+
+#head {
+	/* Your code here! 
+	 * Examples of how to set colors:
+	fill: red;
+	fill: rgb(243, 191, 189);
+	fill: rgba(243, 191, 189, 0.5);
+    fill: hsl(180, 70%, 50%);
+	 * You can even change the color of the line! Examples:
+	path: #FFF000;
+	 * You can even set colors to be gradients! If you want to try this, visit:
+	 * http://www.colorzilla.com/gradient-editor/
+	 * See if you can have the most unique or complex color scheme!
+	*/
+	fill: #FFFFFF;
+	path: black;
+}
+
+#right-eye {
+
+}
+
+#left-eye {
+
+}
+
+.eye {
+
+}
+
+#neck {
+
+}
+
+#shirt {
+
+}
+
+#cape {
+
+}
+
+#pants {
+
+}
+
+#left-arm {
+
+}
+
+#right-arm {
+
+}
+
+.arm {
+
+}
+
+#left-shoe {
+
+}
+
+#right-shoe {
+
+}
+
+.shoe {
+	
+}
