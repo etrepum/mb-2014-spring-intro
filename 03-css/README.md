@@ -45,19 +45,25 @@ Example:
 
 # Project Avatar
 
+http://bit.ly/mbit-intro-avatar
 
+1. Put the avatar.html and avatar.css files into your repository
+2. Create a link from your index.html to your avatar.html
+3. Make it look just the way you want. Feel free to change the shapes too!
 
-# Ideas
+# Project Index
 
-(This is all in-progress, super early draft just to get a URL up)
+1. Create a CSS file for your index.html, call it index.css.
+2. Add a `<link rel="stylesheet" href="index.css">` to the head of
+   your index.html
+3. Experiment with adding colors and styles to your page, try
+   using color, background-color, font-size
+4. Try adding a font from Google Fonts to your index,
+   http://google.com/fonts/
 
-* `a` tag
-* Separate HTML pages
-* `link` tag and css file `<link rel="stylesheet" href="style.css">`
-* `ul`, `li`
-* selectors (tag names, attributes, id)
-* color, background-color, font-face
-* position, left, top, bottom, right, width, height
-* margin, padding, border
-* color keywords, rgb, rgba, hsl, hsla, numeric colors
-* google fonts
+# Project Logo Puzzle
+
+http://bit.ly/mbit-intro-logo
+
+1. Put logo.html and logo.css into your repository
+2. Move the pieces around in logo.css until the logo is in the right place
