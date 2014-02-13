@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    font-size: 3em;
+}
+
+li {
+    text-align: left;
+}
+
+a, a:visited {
+    color: blue;
+}
