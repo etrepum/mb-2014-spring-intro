@@ -48,6 +48,11 @@ Example:
 
 # Project Choose Your Own Adventure
 
+Using anchor tags, build a choose your own adventure story.
+
+Here's an example:
+http://bob.ippoli.to/mbit-intro-4-game/
+
 # JavaScript
 
 # Group Project Planning
