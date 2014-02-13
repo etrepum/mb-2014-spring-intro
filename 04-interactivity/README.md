@@ -1,3 +1,9 @@
+# GitHub Pages
+
+Have students test their index page on GitHub to make sure it's
+getting published. Walk them through going to username.github.io
+and having GitHub send them an email verification.
+
 # Anchor tags
 
 The anchor tag, or `a` is one of the key innovations of HTML. It
