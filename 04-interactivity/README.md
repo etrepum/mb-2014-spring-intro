@@ -4,6 +4,8 @@ Have students test their index page on GitHub to make sure it's
 getting published. Walk them through going to username.github.io
 and having GitHub send them an email verification.
 
+> This seemed to go fine, took a bit longer than I expected though.
+
 # Anchor tags
 
 The anchor tag, or `a` is one of the key innovations of HTML. It
@@ -32,6 +34,9 @@ Example:
 </a>
 ```
 
+> The students seemed to understand this. I didn't cover target but
+> I don't think it's too important.
+
 # CSS Jargon
 
 * *Selector* - the first part of a CSS rule that is used to select
@@ -42,9 +47,12 @@ Example:
   aspect of that element and its children, such as `font-family` or
   `color`.
 
+> I spent a little more time covering this as a refresher. Again,
+> mostly just demonstrating it and not covering all of the semantics.
+
 # Project Index
 
-Demonstrate this more clearly
+Demonstrate this more clearly than last time.
 
 1. Create a CSS file for your index.html, call it index.css.
 2. Add a `<link rel="stylesheet" href="index.css">` to the head of
@@ -53,6 +61,10 @@ Demonstrate this more clearly
    using color, background-color, font-size
 4. Try adding a font from Google Fonts to your index,
    http://google.com/fonts/
+5. Add a link to your avatar project
+
+> This was more focused this time as the goal was to link to the
+> avatar project. We didn't spend much time here.
 
 # Project Choose Your Own Adventure
 
@@ -61,12 +73,20 @@ Using anchor tags, build a choose your own adventure story.
 Here's an example:
 http://bob.ippoli.to/mbit-intro-4-game/
 
+> This was a fantastic project that the students really dug into
+> and that is very open-ended to accommodate students of differing
+> speed. The primary issue here was helping
+> the students get into a creative mode. We spent the rest of the
+> class on this and will continue to work on it on day 5.
+
 # Project Animation
 
 If students finish the choose your own adventure quickly, give them
 this animation project to play with.
 
 http://bit.ly/mbit-intro-animation
+
+> This is getting pushed back to day 5 or 6.
 
 # Group Project Planning
 
@@ -78,3 +98,5 @@ of separate pages. We'll tailor the lessons to cover techniques that
 will be necessary to complete the projects.
 
 Rough project ideas should be pitched by the end of class.
+
+> This is getting pushed back to day 5 or 6.
