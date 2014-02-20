@@ -85,7 +85,7 @@ not very good warnings for us, but we can relax them by adding
 exactly these comments to the top of our `clicks.js` file:
 ```javascript
 /*global $*/
-/*jslint sloppy: true*/
+/*jslint sloppy: true, browser: true*/
 ```
 
 Now when you save it, you shouldn't get any warnings. These comments
@@ -103,10 +103,75 @@ we click anywhere on the page. Add this code to the bottom of
 your `clicks.js` file:
 
 ```javascript
-$(window).on("click", function (e) {
+$(window).on("click", function onPageClick(e) {
   pageTitle.text(["position:", e.clientX, e.clientY].join(" "));
 });
 ```
 
-(TODO ideas: toggle class on click of the title, add an image, absolutely position it with css, move the image)
+We can also handle clicks on specific elements on the page, let's add
+a css rule that will make it easy to demonstrate this. Add this to
+your `clicks.css` file:
 
+```css
+h1.page-title.clicked { color: darksalmon; }
+```
+
+And add this to your `clicks.js` file:
+
+```javascript
+pageTitle.on('click', function onTitleClick(e) {
+    pageTitle.toggleClass('clicked');
+});
+```
+
+We have full control of HTML and CSS from Javascript, so we can do
+cool stuff with images too. Find any image you like from the web and
+copy it to your clicks project. I recommend using a SVG or PNG file
+with some transparency. You can download a SVG of the Mission Bit logo
+from here:
+
+(Write `missionbit.com/images/icon128.svg` on the board)
+
+Now we can add this logo to our css. Let's place it in the center and
+move it when we click. We'll need to add it to our HTML, and create a
+CSS rule for it.
+
+```html
+<img src="icon128.svg" class="logo">
+```
+
+```css
+img.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 128px;
+    height: 128px;
+    margin-left: -64px;
+    margin-top: -64px;
+}
+```
+
+```javascript
+var logo = $("img.logo");
+$(window).on("click", function (e) {
+    logo.css({left: e.clientX + 'px',
+              top: e.clientY + 'px'});
+});
+```
+
+If the class asks how to animate it, a simple way to do that would be
+to add the following CSS rule:
+
+```css
+img.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 128px;
+    height: 128px;
+    margin-left: -64px;
+    margin-top: -64px;
+    transition: 1s;
+}
+```
