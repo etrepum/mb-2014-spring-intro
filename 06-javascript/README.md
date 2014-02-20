@@ -108,5 +108,5 @@ $(window).on("click", function (e) {
 });
 ```
 
-(TODO: add an image, absolutely position it with css, move the image)
+(TODO ideas: toggle class on click of the title, add an image, absolutely position it with css, move the image)
 
