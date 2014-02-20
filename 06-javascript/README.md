@@ -15,7 +15,7 @@ I'll also go over the CSS trick to change the color of
 Here's an example:
 http://bob.ippoli.to/mbit-intro-4-game/
 
-# Javascript (`clicks` part 1)
+# Javascript (clicks part 1)
 
 HTML is about structure, CSS is about presentation, and Javascript is
 about function. Javascript is the programming language of the web, and
