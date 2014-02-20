@@ -34,8 +34,9 @@ popular choice so we'll start with that one.
 
 (Write `jquery.com` on the board)
 
-(Write `codecademy.com/tracks/jquery` on the board for students that
-get too far ahead)
+(Write `codecademy.com/tracks/javascript` and
+`codecademy.com/tracks/jquery` on the board for students that get too
+far ahead)
 
 So that our projects can run standalone and load a bit faster, it's
 best to go ahead and download a copy of jQuery instead of including
