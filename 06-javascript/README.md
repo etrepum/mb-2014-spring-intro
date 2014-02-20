@@ -38,6 +38,10 @@ popular choice so we'll start with that one.
 `codecademy.com/tracks/jquery` on the board for students that get too
 far ahead)
 
+If handling this stuff by hand from scratch turns out to be too much,
+here is a template project we can start with:
+http://bit.ly/mbit-intro-clicks
+
 So that our projects can run standalone and load a bit faster, it's
 best to go ahead and download a copy of jQuery instead of including
 it from somewhere else. You can do this by going to the download
