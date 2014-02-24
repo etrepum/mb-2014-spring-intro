@@ -15,6 +15,10 @@ I'll also go over the CSS trick to change the color of
 Here's an example:
 http://bob.ippoli.to/mbit-intro-4-game/
 
+> This went pretty well, I think most students were able to finish
+> their game. I don't think I could've spent longer on this without
+> losing the better students.
+
 # Javascript (clicks part 1)
 
 HTML is about structure, CSS is about presentation, and Javascript is
@@ -41,6 +45,8 @@ far ahead)
 If handling this stuff by hand from scratch turns out to be too much,
 here is a template project we can start with:
 http://bit.ly/mbit-intro-clicks
+
+> I ended up giving them the template for this.
 
 So that our projects can run standalone and load a bit faster, it's
 best to go ahead and download a copy of jQuery instead of including
@@ -85,6 +91,8 @@ var pageTitle = $("h1.page-title");
 pageTitle.text("My code runs!");
 ```
 
+> This seemed to work, although I did it without the var
+
 When you save this, JSLint might give you some warnings. They're
 not very good warnings for us, but we can relax them by adding
 exactly these comments to the top of our `clicks.js` file:
@@ -113,6 +121,8 @@ $(window).on("click", function onPageClick(e) {
 });
 ```
 
+> I didn't have them do this part, we just logged a message
+
 We can also handle clicks on specific elements on the page, let's add
 a css rule that will make it easy to demonstrate this. Add this to
 your `clicks.css` file:
@@ -128,6 +138,8 @@ pageTitle.on('click', function onTitleClick(e) {
     pageTitle.toggleClass('clicked');
 });
 ```
+
+> We did get into toggling classes, but we did it after moving
 
 We have full control of HTML and CSS from Javascript, so we can do
 cool stuff with images too. Find any image you like from the web and
@@ -165,6 +177,8 @@ $(window).on("click", function (e) {
 });
 ```
 
+> It looks like we didn't need the `+ 'px'` part, which was nice.
+
 If the class asks how to animate it, a simple way to do that would be
 to add the following CSS rule:
 
@@ -179,4 +193,21 @@ img.logo {
     margin-top: -64px;
     transition: 1s;
 }
+```
+
+> We did get to this.
+> We also tried to animate the opacity but it didn't work. I'm pretty
+> sure this was due to selectivity, I didn't write the rules properly
+> for the 0% to take effect.
+> This is the code we ended up with at the end of class:
+
+```javascript
+/*global $*/
+/*jslint sloppy:true, browser: true*/
+$('h1.page-title').text('It worked!');
+$(window).on('click', function (e) {
+    $('img.logo').css({left: e.clientX,
+                       top: e.clientY});
+    $('img.logo').toggleClass('hide');
+});
 ```
