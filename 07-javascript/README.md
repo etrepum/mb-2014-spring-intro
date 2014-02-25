@@ -195,3 +195,32 @@ $(window).on('click', function (e) {
               top: e.pageY});
 });
 ```
+
+# Rolling Dice
+
+One way to get interesting behavior to make something look cool or to
+make a game more fun is to add some randomness. The `Math.random()`
+function returns a floating point (rational) number between 0 and 1.
+
+http://bit.ly/mbit-intro-dice
+
+This function will make randomness easier to use:
+
+```javascript
+function randomInt(lo, hi) {
+    var range = hi - lo;
+    return lo + Math.floor(range * Math.random());
+}
+```
+
+```javascript
+function randomRoll() {
+    return String.fromCharCode(randomInt(9856, 9861));
+}
+```
+
+```javascript
+$(window).on('click', function (e) {
+    $('.die').text(randomRoll);
+});
+```
