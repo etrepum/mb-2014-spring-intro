@@ -4,6 +4,10 @@ h1.clicked {
 .hide {
     opacity: 0;
 }
+.clicked {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
 img.logo {
     transition: 1s;
     position: absolute;

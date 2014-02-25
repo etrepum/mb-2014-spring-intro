@@ -42,7 +42,7 @@ The reason why I couldn't get `opacity` to work last class was that I
 expected it to take a percentage, but it will only accept numbers
 between 0 and 1.
 
-# Javascript (clicks part 1, mostly a repeat from 6)
+# Javascript (clicks)
 
 HTML is about structure, CSS is about presentation, and Javascript is
 about function. Javascript is the programming language of the web, and
@@ -78,6 +78,8 @@ we're doing.
 /*jslint sloppy: true, browser: true*/
 ```
 
+## Replace text on load
+
 Now go back to your clicks.js file and add the following code:
 ```javascript
 $("h1.page-title").text("My code runs!");
@@ -92,6 +94,8 @@ instead of "We'll replace this title".
 
 (This may take a little while to get everyone caught up)
 
+## Move logo to click position
+
 The next thing we want to try is to do something when we click the
 page. We can do this by telling jQuery to call a function when
 we click anywhere on the page. Add this code to the bottom of
@@ -99,14 +103,18 @@ your `clicks.js` file:
 
 ```javascript
 $(window).on('click', function (e) {
-  $('h1.page-title').css({left: e.clientX,
-                          top: e.clientY});
+    $('img.logo').css({left: e.pageX,
+                       top: e.pageY});
 });
 ```
+
+## Add a transition
 
 What are some other things we can do with this? One is to make it
 smoothly transition from one position to the other. We can do this
 by adding `transition: 1s` to the CSS rule for `img.logo`.
+
+## Alternate between hide and show
 
 What if we want it to disappear and reappear? We can do this by
 creating a rule for a `hide` class that sets the `opacity` property to
@@ -114,100 +122,76 @@ creating a rule for a `hide` class that sets the `opacity` property to
 
 ```css
 .hide {
-  opacity: 0;
+    opacity: 0;
 }
 ```
 
 ```javascript
 $(window).on('click', function (e) {
-  $('h1.page-title').css({left: e.clientX,
-                          top: e.clientY});
+    $('img.logo').css({left: e.pageX,
+                       top: e.pageY});
+    $('img.logo').toggleClass('hide');
 });
 ```
+
+## Handle click of a specific element
 
 We can also handle clicks on specific elements on the page, let's add
 a css rule that will make it easy to demonstrate this. Add this to
 your `clicks.css` file:
 
 ```css
-h1.page-title.clicked { color: darksalmon; }
+.clicked {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
 ```
 
 And add this to your `clicks.js` file:
 
 ```javascript
-pageTitle.on('click', function onTitleClick(e) {
-    pageTitle.toggleClass('clicked');
+$('img.logo').on('click', function (e) {
+    e.stopImmediatePropagation();
+    $(this).toggleClass('clicked');
 });
 ```
 
-We have full control of HTML and CSS from Javascript, so we can do
-cool stuff with images too. Find any image you like from the web and
-copy it to your clicks project. I recommend using a SVG or PNG file
-with some transparency. You can download a SVG of the Mission Bit logo
-from here:
+## Functions and state
 
-(Write `missionbit.com/images/icon128.svg` on the board)
+```javascript
+var numberOfClicks = 0;
+function updatePageTitle() {
+    $('h1.page-title').text(['Clicks: ', numberOfClicks].join(''));
+}
 
-Now we can add this logo to our css. Let's place it in the center and
-move it when we click. We'll need to add it to our HTML, and create a
-CSS rule for it.
+updatePageTitle();
+
+$(window).on('click', function (e) {
+    numberOfClicks = numberOfClicks + 1;
+    updatePageTitle();
+});
+```
+
+## Conditions
+
+Add another h1 to the page:
 
 ```html
-<img src="icon128.svg" class="logo">
+<h1 class="click-position"></h1>
 ```
 
-```css
-img.logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 128px;
-    height: 128px;
-    margin-left: -64px;
-    margin-top: -64px;
-}
-```
+Modify the event handler to determine where the click was relative to
+the logo.
 
 ```javascript
-var logo = $("img.logo");
-$(window).on("click", function (e) {
-    logo.css({left: e.clientX + 'px',
-              top: e.clientY + 'px'});
-});
-```
-
-> It looks like we didn't need the `+ 'px'` part, which was nice.
-
-If the class asks how to animate it, a simple way to do that would be
-to add the following CSS rule:
-
-```css
-img.logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 128px;
-    height: 128px;
-    margin-left: -64px;
-    margin-top: -64px;
-    transition: 1s;
-}
-```
-
-> We did get to this.
-> We also tried to animate the opacity but it didn't work. I'm pretty
-> sure this was due to selectivity, I didn't write the rules properly
-> for the 0% to take effect.
-> This is the code we ended up with at the end of class:
-
-```javascript
-/*global $*/
-/*jslint sloppy:true, browser: true*/
-$('h1.page-title').text('It worked!');
 $(window).on('click', function (e) {
-    $('img.logo').css({left: e.clientX,
-                       top: e.clientY});
-    $('img.logo').toggleClass('hide');
+    var logo = $('img.logo');
+    if (e.pageX < logo.position().left) {
+        $('h1.click-position').text('You clicked to the left of the logo');
+    } else {
+        $('h1.click-position').text('You clicked to the right of the logo');
+    }
+    logo.css({left: e.pageX,
+              top: e.pageY});
 });
 ```
