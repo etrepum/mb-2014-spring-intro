@@ -50,8 +50,8 @@ your `clicks.css` file:
 
 ```css
 .clicked {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 ```
 
