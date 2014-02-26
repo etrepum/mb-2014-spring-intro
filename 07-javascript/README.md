@@ -1,47 +1,3 @@
-# CSS Jargon
-
-* *Selector* - the first part of a CSS rule that is used to select
-  elements by tag name, id, class, or other features of that
-  element
-* *Property* - the second part of a CSS rule is a `{` block `}` with
-  zero or more properties. Each property controls some presentation
-  aspect of that element and its children, such as `font-family` or
-  `color`.
-
-# CSS Specificity Rules
-
-(to explain why opacity didn't work last time)
-
-See also:
-
-* http://bit.ly/mdn-css-specificity
-* http://specificity.keegan.st/
-
-From lowest to highest
-
-* Universal (`*`)
-* Type (`div`)
-* Class (`.purple`)
-* Attribute (`input[value="10"]`)
-* Pseudo-class (`a:visited`)
-* Id (`#some-element`)
-* Inline style (`<p style="color: blue"></p>`)
-
-`!important` overrides any rule that is not important
-
-For example, on this page the text in #some-element would be blue.
-
-```css
-* { color: blue !important; }
-#some-element { color: red; }
-```
-
-# Why didn't opacity work?
-
-The reason why I couldn't get `opacity` to work last class was that I
-expected it to take a percentage, but it will only accept numbers
-between 0 and 1.
-
 # Javascript (clicks)
 
 HTML is about structure, CSS is about presentation, and Javascript is
@@ -103,6 +59,14 @@ your `clicks.js` file:
 
 ```javascript
 $(window).on('click', function (e) {
+    $('img.logo').css({left: e.pageX});
+});
+```
+
+I asked the students how to get it to move vertically
+
+```javascript
+$(window).on('click', function (e) {
     $('img.logo').css({left: e.pageX,
                        top: e.pageY});
 });
@@ -114,113 +78,195 @@ What are some other things we can do with this? One is to make it
 smoothly transition from one position to the other. We can do this
 by adding `transition: 1s` to the CSS rule for `img.logo`.
 
-## Alternate between hide and show
+# Freestyle
 
-What if we want it to disappear and reappear? We can do this by
-creating a rule for a `hide` class that sets the `opacity` property to
-0 and changing our handler to toggle that class.
+From this point I basically made things up as we went along based on
+ideas from the students. Here's what they came up with:
 
-```css
-.hide {
-    opacity: 0;
-}
-```
+## Rotate
 
-```javascript
-$(window).on('click', function (e) {
-    $('img.logo').css({left: e.pageX,
-                       top: e.pageY});
-    $('img.logo').toggleClass('hide');
-});
-```
-
-## Handle click of a specific element
-
-We can also handle clicks on specific elements on the page, let's add
-a css rule that will make it easy to demonstrate this. Add this to
-your `clicks.css` file:
+This was implemented by adding the following CSS
 
 ```css
-.clicked {
-    transform: rotate(360deg);
+.rotated {
     -webkit-transform: rotate(360deg);
 }
 ```
 
-And add this to your `clicks.js` file:
+> A common mistake that students made at this point was
+> writing `$('logo')` instead of `$('.logo')`. Perhaps
+> sticking with the full `tag.class` syntax would've been
+> a little more successful.
 
-```javascript
-$('img.logo').on('click', function (e) {
-    e.stopImmediatePropagation();
-    $(this).toggleClass('clicked');
-});
-```
-
-## Functions and state
-
-```javascript
-var numberOfClicks = 0;
-function updatePageTitle() {
-    $('h1.page-title').text(['Clicks: ', numberOfClicks].join(''));
-}
-
-updatePageTitle();
-
-$(window).on('click', function (e) {
-    numberOfClicks = numberOfClicks + 1;
-    updatePageTitle();
-});
-```
-
-## Conditions
-
-Add another h1 to the page:
-
-```html
-<h1 class="click-position"></h1>
-```
-
-Modify the event handler to determine where the click was relative to
-the logo.
+With this handler:
 
 ```javascript
 $(window).on('click', function (e) {
-    var logo = $('img.logo');
-    if (e.pageX < logo.position().left) {
-        $('h1.click-position').text('You clicked to the left of the logo');
-    } else {
-        $('h1.click-position').text('You clicked to the right of the logo');
-    }
-    logo.css({left: e.pageX,
-              top: e.pageY});
+    $('.logo').css({left: e.pageX,
+                    top: e.pageY});
+    $('.logo').toggleClass('rotated');
 });
 ```
 
-# Rolling Dice
+## Follow the mouse
 
-One way to get interesting behavior to make something look cool or to
-make a game more fun is to add some randomness. The `Math.random()`
-function returns a floating point (rational) number between 0 and 1.
+Change the handler to use `'mousemove'` rather than click
 
-http://bit.ly/mbit-intro-dice
+## Flip
 
-This function will make randomness easier to use:
+Change the CSS rule for `rotated` to:
 
 ```javascript
-function randomInt(lo, hi) {
-    var range = hi - lo;
-    return lo + Math.floor(range * Math.random());
+.rotated {
+    -webkit-transform: rotateY(180deg);
 }
 ```
 
-```javascript
-function randomRoll() {
-    return String.fromCharCode(randomInt(9856, 9861));
-}
-```
+## Vibrate
+
+To make it vibrate, I decided to periodically manipulate the
+margins. Since transitions were turned on we can do this periodically.
 
 ```javascript
-$(window).on('click', function (e) {
-    $('.die').text(randomRoll);
-});
+setInterval(function () {
+    $('.logo').css({
+        'margin-left': 200 * Math.random() - 100
+    });
+}, 200);
+```
+
+We then pulled the random number generator to apply it to both axes
+
+```javascript
+function randomMargin() {
+    return Math.random() * 200 - 100;
+}
+setInterval(function () {
+    $('.logo').css({
+        'margin-left': randomMargin(),
+        'margin-right': randomMargin()
+    });
+}, 200);
+```
+
+## Bounce around the screen
+
+This was a little trickier, but it was cool to hear the students talk
+about physics at this point. I started by implementing just the
+horizontal motion and the students helped with the rest.
+
+It's important to remove the css for `transition: 1s` at this point,
+since we increased the frequency of our timer and we're handling the
+animation on our own.
+
+> A mistake I made myself here the first time is to write
+> `$(window).width` instead of `$(window).width()`.
+
+```javascript
+var vx = Math.random() * 10 - 5;
+var x = $(window).width() / 2;
+
+setInterval(function () {
+    $('.logo').css({
+        left: x
+    });
+    x = x + vx;
+}, 20);
+```
+
+We then added vertical movement
+
+```javascript
+var vx = Math.random() * 10 - 5;
+var vy = Math.random() * 10 - 5;
+var x = $(window).width() / 2;
+var x = $(window).height() / 2;
+
+setInterval(function () {
+    $('.logo').css({
+        left: x,
+        top: y
+    });
+    x = x + vx;
+    y = y + vy;
+}, 20);
+```
+
+And finally we added the conditions to make it bounce, first just in
+the horizontal direction.
+
+```javascript
+var vx = Math.random() * 10 - 5;
+var vy = Math.random() * 10 - 5;
+var x = $(window).width() / 2;
+var x = $(window).height() / 2;
+
+setInterval(function () {
+  $('.logo').css({
+      left: x,
+      top: y
+  });
+  x = x + vx;
+  y = y + vy;
+  if (x < 0) {
+      x = 0;
+      vx = -vx;
+  } else if (x > $(window).width()) {
+      x = $(window).width();
+      vx = -vx;
+  }
+}, 20);
+```
+
+Then in both directions
+
+```javascript
+var vx = Math.random() * 10 - 5;
+var vy = Math.random() * 10 - 5;
+var x = $(window).width() / 2;
+var x = $(window).height() / 2;
+
+setInterval(function () {
+  $('.logo').css({
+      left: x,
+      top: y
+  });
+  x = x + vx;
+  y = y + vy;
+  if (x < 0) {
+      x = 0;
+      vx = -vx;
+  } else if (x > $(window).width()) {
+      x = $(window).width();
+      vx = -vx;
+  }
+  if (y < 0) {
+      y = 0;
+      vy = -vy;
+  } else if (y > $(window).height()) {
+      y = $(window).height();
+      vy = -vy;
+  }
+}, 20);
+```
+
+## Move in a circle
+
+The last demo was to get it to move in a circle instead of bouncing
+off the walls. I briefly talked about the trig involved and then dove
+into writing the code.
+
+```javascript
+var x = $(window).width() / 2;
+var y = $(window).height() / 2;
+var theta = 0;
+var vtheta = Math.PI / 180;
+var r = 60;
+setInterval(function () {
+    $('.logo').css({
+        'left': x + r * Math.cos(theta),
+        'top': y + r * Math.sin(theta)
+    });
+    theta = theta + vtheta;
+}, 20);
 ```
