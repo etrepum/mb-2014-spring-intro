@@ -1,22 +1,21 @@
 /*global $*/
 /*jslint sloppy:true, browser: true, devel: true*/
+
 function restartGame() {
+    // This function should reset everything on the page and start the game
     $('.die')
         .addClass('selectable')
         .removeClass('hold');
     roll();
 }
 
-function randomInt(lo, hi) {
-    var range = 1 + hi - lo;
-    return lo + Math.floor(range * Math.random());
-}
-
 function randomRoll() {
-    return randomInt(1, 6);
+    // return a random number between 1 and 6
+    return 1 + Math.floor(6 * Math.random());
 }
 
 function calculateScore() {
+    // Calculate the total and determine if it qualifies
     var has1 = false;
     var has4 = false;
     var total = 0;
@@ -50,17 +49,23 @@ function updateState() {
 }
 
 function roll() {
+    // Roll all of the dice
     $('.die.selectable.hold').removeClass('selectable');
     $('.die.selectable').attr('data-roll', randomRoll);
     updateState();
 }
 
-$('.dice').on('click', '.die.selectable', function (e) {
-    $(this).toggleClass('hold');
+function holdDie() {
+    // Hold a single die
+    var die = $(this);
+    die.toggleClass('hold');
     updateState();
+}
+
+$(document).ready(function() {
+    // This gets called exactly once to set everything up
+    $('.dice').on('click', '.die.selectable', holdDie);
+    $('.buttons').on('click', 'button.roll:enabled', roll);
+    $('.buttons').on('click', 'button.play-again:enabled', restartGame);
+    restartGame();
 });
-
-$('.buttons').on('click', 'button.roll:enabled', roll);
-$('.buttons').on('click', 'button.play-again:enabled', restartGame);
-
-restartGame();
