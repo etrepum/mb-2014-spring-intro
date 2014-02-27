@@ -1,4 +1,6 @@
-# CSS Jargon
+# CSS
+
+## CSS Jargon
 
 * *Selector* - the first part of a CSS rule that is used to select
   elements by tag name, id, class, or other features of that
@@ -8,7 +10,7 @@
   aspect of that element and its children, such as `font-family` or
   `color`.
 
-# CSS Specificity Rules
+## CSS Specificity Rules
 
 (to explain why opacity didn't work last time)
 
@@ -36,11 +38,13 @@ For example, on this page the text in #some-element would be blue.
 #some-element { color: red; }
 ```
 
-# Why didn't opacity work?
+## Why didn't opacity work? (will they remember this from a week ago?)
 
 The reason why I couldn't get `opacity` to work last class was that I
 expected it to take a percentage, but it will only accept numbers
 between 0 and 1.
+
+# Dice game
 
 ## Handle click of a specific element
 
