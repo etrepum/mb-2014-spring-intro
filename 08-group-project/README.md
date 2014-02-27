@@ -46,74 +46,16 @@ between 0 and 1.
 
 # Dice game
 
-## Handle click of a specific element
+http://bit.ly/mbit-intro-dice-game
 
-We can also handle clicks on specific elements on the page, let's add
-a css rule that will make it easy to demonstrate this. Add this to
-your `clicks.css` file:
-
-```css
-.clicked {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-}
-```
-
-And add this to your `clicks.js` file:
-
-```javascript
-$('img.logo').on('click', function (e) {
-    e.stopImmediatePropagation();
-    $(this).toggleClass('clicked');
-});
-```
-
-## Functions and state
-
-```javascript
-var numberOfClicks = 0;
-function updatePageTitle() {
-    $('h1.page-title').text(['Clicks: ', numberOfClicks].join(''));
-}
-
-updatePageTitle();
-
-$(window).on('click', function (e) {
-    numberOfClicks = numberOfClicks + 1;
-    updatePageTitle();
-});
-```
-
-# Rolling Dice
-
-One way to get interesting behavior to make something look cool or to
-make a game more fun is to add some randomness. The `Math.random()`
-function returns a floating point (rational) number between 0 and 1.
-
-http://bit.ly/mbit-intro-dice
-
-This function will make randomness easier to use:
-
-```javascript
-function randomInt(lo, hi) {
-    var range = hi - lo;
-    return lo + Math.floor(range * Math.random());
-}
-```
-
-```javascript
-function randomRoll() {
-    return String.fromCharCode(randomInt(9856, 9861));
-}
-```
-
-```javascript
-$(window).on('click', function (e) {
-    $('.die').text(randomRoll);
-});
-```
+This has a few blanks to fill in to familiarize the students with some
+more jQuery. They'll have some time to add some extra features in the
+first half. If they finish quickly we'll start group project planning
+sooner.
 
 # Group Project Planning
+
+We should start this by the half.
 
 Organize the students by interest to pitch a project
 idea. The project should go a bit beyond what we've learned so far,
@@ -122,4 +64,5 @@ would be something equivalent to Flappy Bird, or a site with a handful
 of separate pages. We'll tailor the lessons to cover techniques that
 will be necessary to complete the projects.
 
-Rough project ideas should be pitched by the end of class.
+Rough project ideas should be pitched by the end of class (maybe the
+beginning of next class?).
