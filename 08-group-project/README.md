@@ -66,3 +66,7 @@ will be necessary to complete the projects.
 
 Rough project ideas should be pitched by the end of class (maybe the
 beginning of next class?).
+
+One possibility:
+
+* http://bit.ly/house-app-contest-2014
