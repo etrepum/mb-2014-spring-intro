@@ -11,7 +11,7 @@ appropriate library for their game (Impact, Cocos2d, Crafty, melon, &hellip;)?
 Dulce suggested I should talk about how animation works (sprites,
 sprite sheets, etc.).
 
-Here are the groups:
+Here are the groups: https://github.com/MissionBit/mentors/wiki/Spring-2014-Intro-Lick-Wilmerding#wiki-group-project-1
 
 ## Operation Peach
 
@@ -40,9 +40,9 @@ Repo: food-stacker
 * Caresse Zhong (caressez)
 * Sabrina On (sabrinaon)
 
-## Electronic Dreams
+## Electronic Dreamers
 
-Repo: electronic-dreams
+Repo: electronic-dreamers
 
 * Brandon Carino (Epicyoshi7)
 * Andy Tsang (CreedShot)
