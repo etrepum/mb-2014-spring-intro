@@ -47,7 +47,7 @@ set out to do, so if you want us to cover some particular then topic just ask.
 Always be thinking about ideas for sites or applications you want to make,
 and feel free to work with others to make them happen.
 
-> I didn't give too much of this shpiel, but it makes sense to leave
+> I didn't give too much of this spiel, but it makes sense to leave
 > it in here for readers of the curriculum :)
 
 Account
